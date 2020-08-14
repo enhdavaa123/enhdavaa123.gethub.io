@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>time temp</title>
+</head>
+<body>
+    <div>00:00:00</div>
+    <button onclick="startstop()">stop</button>
+    <button onclick="starttime()">star</button>
+      <script>
+          var doil = 0
+          var secunt = 0
+          var minute = 0
+        function starttime() {
+            document.querySelector("div").innerHTML = doil
+            doil++
+            setInterval(starttime,1000)
+        }
+        function stop(){
+            if(intervalId != 0){
+                clearInterval(intervalId)
+                intervalId = 0 
+            }
+            else{
+                intervalId = setInterval(starttime,1000)
+            }
+        } 
+        </script>
+</body>
+</html>
